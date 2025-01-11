@@ -1,80 +1,55 @@
 #pragma once
 
 typedef enum {
-    VAR_TYPES = 0, // Referencing `variable_types_t`
-    MATH_OPERATORS = 1, // Referencing `math_operators_t`
-    COMPARISON_OPERATORS = 2, // Referencing `comparison_operator_t`
-    KEYWORDS = 3, // Referencing `keywords_t`
-    DECL_KEYWORDS = 4, // Referencing `decl_keywords_t`'
-    COUNT,
-} groups_types_t;
+    // Punctuation tokens
+    TOK_SEMICOLON, // ;
+    TOK_LEFTPAREN, // (
+    TOK_RIGHTPAREN, // )
+    TOK_LEFTBRAC, // [
+    TOK_RIGHTBRAC, // ]
 
-typedef enum {
-    INTEGER,
-    FLOAT,
-    CHAR,
-    STRING,
-    BOOLEAN,
-    NULL_TYPE,
-    VOID,
-    UNDERFINED, 
-    COUNT,
-} variable_types_t;
+    TOK_IDENTIFIER,
 
-typedef enum {
-    ADD,
-    SUBTRACT,
-    MULTIPLY,
-    DIVIDE,
-    MODULUS,
-    POWER,
-    SQUARE_ROOT,
-    FACTORIAL,
-    COUNT,
-} math_operators_t;
+    // Arithamtic Operators
+    TOK_PLUS,
+    TOK_MIN,
+    TOK_MUL,
+    TOK_DIV,
+    TOK_INC,
+    TOK_DEC,
+    TOK_ASSIGN,
 
-typedef enum {
-    ASSIGNMENT,
-    EQUALS,
-    NOT_EQUALS,
-    LESS_THAN,
-    LESS_THAN_OR_EQUAL,
-    GREATER_THAN,
-    GREATER_THAN_OR_EQUAL,
-    LOGICAL_AND,
-    LOGICAL_OR,
-    LOGICAL_NOT,
-    BITWISE_AND,
-    BITWISE_OR,
-    BITWISE_XOR,
-    BITWISE_NOT,
-    BITWISE_LEFT_SHIFT,
-    BITWISE_RIGHT_SHIFT,
-    CONDITIONAL_EXPRESSION,
-    COUNT,
-} comparison_operator_t;
+    // Logic Operators
+    TOK_AND,
+    TOK_NOT,
+    TOK_OR,
+    TOK_EQU,
+    TOK_NEQU,
+    TOK_GREATER,
+    TOK_GREATER_OR_EQU,
+    TOK_LOWER,
+    TOK_LOWER_OR_EQU,
 
-typedef enum {
-    IF,
-    ELSE,
-    SWITCH,
-    CASE,
-    DEFAULT,
-    WHILE,
-    FOR,
-    DO_WHILE,
-    CONTINUE,
-    BREAK,
-    RETURN,
-    COUNT,
-} keywords_t;
+    // Bitwise Operators
+    TOK_B_NOT,
+    TOK_B_AND,
+    TOK_B_OR,
+    TOK_XOR,
+    TOK_RIGHT_SH,
+    TOK_LEFT_SH,
 
-typedef enum {
-    CONST,
-    STATIC,
-    VIRTUAL,
-    EXPLICIT,
-    OVERRIDE,
-    FINAL,
-    COUNT,
-} decl_keywords_t;
+    // Keywords
+    TOK_CONST,
+    TOK_LET,
+    TOK_IF,
+    TOK_ELSE,
+    TOK_FOR,
+    TOK_WHILE,
+    TOK_BREAK,
+    TOK_CONTINUE,
+    TOK_FUNC,
+
+    TOK_ILLEGAL,
+    TOK_EOF // Represents end of file token (tells interpreter when to stop.)
+} token_type_t;
+
