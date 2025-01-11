@@ -1,13 +1,9 @@
 #pragma once
 #include "syntax.h"
-#include <string>
-#include <vector>
-
 
 typedef struct {
     groups_types_t type;
-    std::string value;
-    std::vector<std::string> parse_token(Token* token);
+    char* value;
 } Token;
 
-std::vector<std::string> parse_token(Token* token);
+char** parse_token(Token* token);
