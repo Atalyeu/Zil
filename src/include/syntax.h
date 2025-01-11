@@ -7,7 +7,7 @@ typedef enum {
     TOK_VOID,
     TOK_NULL,
     TOK_NUMBER,
-    TOK_LONG,
+    TOK_BIGINT,
     TOK_STRING,
     TOK_BOOL,
 
