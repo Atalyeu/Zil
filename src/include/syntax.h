@@ -2,24 +2,23 @@
 
 typedef enum {
 
-    // Variable Types tokens
+    // Data Types tokens
     TOK_UNDEFINED,
     TOK_VOID,
     TOK_NULL,
-    TOK_INT,
-    TOK_DOUBLE,
+    TOK_NUMBER,
+    TOK_LONG,
     TOK_STRING,
     TOK_BOOL,
-    TOK_FLOAT,
-        
+
     // Punctuation tokens
     TOK_SEMICOLON, // ;
     TOK_LEFTPAREN, // (
     TOK_RIGHTPAREN, // )
     TOK_LEFTBRAC, // [
     TOK_RIGHTBRAC, // ]
-    TOK_RIGHTCURLYBRAC, // {
-    TOK_LEFTCURLYBRAC, // }
+    TOK_RIGHTCBRAC, // {
+    TOK_LEFTCBRAC, // }
 
     TOK_IDENTIFIER,
 
@@ -83,5 +82,6 @@ typedef enum {
     TOK_ININSTANCEOF,
     TOK_ILLEGAL,
     TOK_EOF // Represents end of file token (tells interpreter when to stop.)
+
 } token_type_t;
 
