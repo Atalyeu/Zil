@@ -1,12 +1,25 @@
 #pragma once
 
 typedef enum {
+
+    // Variable Types tokens
+    TOK_UNDEFINED,
+    TOK_VOID,
+    TOK_NULL,
+    TOK_INT,
+    TOK_DOUBLE,
+    TOK_STRING,
+    TOK_BOOL,
+    TOK_FLOAT,
+        
     // Punctuation tokens
     TOK_SEMICOLON, // ;
     TOK_LEFTPAREN, // (
     TOK_RIGHTPAREN, // )
     TOK_LEFTBRAC, // [
     TOK_RIGHTBRAC, // ]
+    TOK_RIGHTCURLYBRAC, // {
+    TOK_LEFTCURLYBRAC, // }
 
     TOK_IDENTIFIER,
 
@@ -17,13 +30,15 @@ typedef enum {
     TOK_DIV,
     TOK_INC,
     TOK_DEC,
+    TOK_POWER,
     TOK_ASSIGN,
 
     // Logic Operators
     TOK_AND,
     TOK_NOT,
     TOK_OR,
-    TOK_EQU,
+    TOK_EQU, // == only value
+    TOK_TRIPLE_EQU, // === value & type
     TOK_NEQU,
     TOK_GREATER,
     TOK_GREATER_OR_EQU,
@@ -41,14 +56,31 @@ typedef enum {
     // Keywords
     TOK_CONST,
     TOK_LET,
+    TOK_VAR,
     TOK_IF,
     TOK_ELSE,
+    TOK_ELSE_IF,
     TOK_FOR,
+    TOK_DO,
     TOK_WHILE,
+    TOK_SWITCH,
+    TOK_CASE,
+    TOK_DEFAULT,
     TOK_BREAK,
     TOK_CONTINUE,
-    TOK_FUNC,
-
+    TOK_FUNCTION,
+    TOK_NEW,
+    TOK_CLASS,
+    TOK_THIS,
+    TOK_RETURN,
+    TOK_IMPORT,
+    TOK_EXPORT,
+    TOK_PUBLIC,
+    TOK_THROW,
+    TOK_TRY,
+    TOK_CATCH,
+    TOK_FINALLY,
+    TOK_ININSTANCEOF,
     TOK_ILLEGAL,
     TOK_EOF // Represents end of file token (tells interpreter when to stop.)
 } token_type_t;
