@@ -85,3 +85,37 @@ typedef enum {
 
 } token_type_t;
 
+typedef struct keyword_t {
+    const char* keyword;
+    token_type_t type;
+} keyword_t;
+
+static const keyword_t keyword_map[] = {
+    {"const", TOK_CONST},
+    {"let", TOK_LET},
+    {"var", TOK_VAR},
+    {"if", TOK_IF},
+    {"else", TOK_ELSE},
+    {"else if", TOK_ELSE_IF},
+    {"for", TOK_FOR},
+    {"do", TOK_DO},
+    {"while", TOK_WHILE},
+    {"switch", TOK_SWITCH},
+    {"case", TOK_CASE},
+    {"default", TOK_BREAK},
+    {"break", TOK_BREAK},
+    {"continue", TOK_CONTINUE},
+    {"function", TOK_FUNCTION},
+    {"new", TOK_NEW},
+    {"class", TOK_CLASS},
+    {"this", TOK_THIS},
+    {"return", TOK_RETURN},
+    {"import", TOK_IMPORT},
+    {"export", TOK_EXPORT},
+    {"public", TOK_PUBLIC},
+    {"throw", TOK_THROW},
+    {"try", TOK_TRY},
+    {"catch", TOK_CATCH},
+    {"finally", TOK_FINALLY},
+    {"instanceof", TOK_ININSTANCEOF},
+};
