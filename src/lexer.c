@@ -1,4 +1,5 @@
 #include "lexer.h"
+#include <stdio.h>
 
 token_type_t keyword_lookup(const keyword_t keyword_map[], const char* identifier, size_t table_size) {
     for (size_t i = 0; i < table_size; i++) {
@@ -10,6 +11,6 @@ token_type_t keyword_lookup(const keyword_t keyword_map[], const char* identifie
 }
 
 token_t next(lexer_t* self) {
-
+    puts("Hello");
 };
 
