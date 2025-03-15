@@ -13,7 +13,6 @@ typedef struct lexer_t {
 } lexer_t;
 
 
-// TODO: setup other helpful functions.
-token_t next(lexer_t* self);
+token_t* lexer_parser(lexer_t* self);
 
 #endif // LEXER_H

@@ -40,8 +40,9 @@ typedef struct {
     token_type_t type;
     char* value;        
     location_t location;
+    struct token_t* next;
 } token_t;
 
-char** tokenize(const char* source_code);
+token_t* next(void);
 
-#endif // TOKEN_H
+#endif //TOKEN_H
